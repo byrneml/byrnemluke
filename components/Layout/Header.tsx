@@ -1,7 +1,6 @@
 import { useRouter } from "next/router";
 import Image from "next/image";
 import config from "@/data/config";
-import Page from "@/components/Layout/Page";
 import Link from "next/link";
 import clsx from "clsx";
 
