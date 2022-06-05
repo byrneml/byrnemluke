@@ -35,7 +35,7 @@ const IndexPage = () => (
               {index > 0 && ", "}
               <ExternalLink
                 href={company.href}
-                styles="no-underline italic text-black hover:underline underline-offset-2 visited:text-black font-semibold"
+                styles="no-underline italic text-black hover:underline underline-offset-2 visited:text-black font-semibold dark:text-white"
                 text={company.name}
               />
             </span>
@@ -51,6 +51,7 @@ const IndexPage = () => (
       </p>
     </Text>
   </Layout>
+  // <div>hi</div>
 );
 
 export default IndexPage;
