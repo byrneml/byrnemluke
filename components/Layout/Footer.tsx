@@ -1,4 +1,5 @@
 import { Twitter, GitHub, Linkedin } from "react-feather";
+import Theme from "@/components/ColorSwitcher";
 import config from "@/data/config";
 import clsx from "clsx";
 
@@ -22,7 +23,7 @@ export const Footer: React.FC = () => {
                 className={clsx(
                   "w-8 h-8 grid place-items-center rounded-md",
                   "bg-gray-900 text-gray-50",
-                  "dark:bg-gray-800 dark:text-gray-50"
+                  "dark:bg-gray-600 dark:text-gray-50"
                 )}
               >
                 {socialIcons[item.label]}
@@ -31,6 +32,9 @@ export const Footer: React.FC = () => {
           );
         })}
       </ul>
+      <div className="mt-8 flex justify-center">
+        <Theme />
+      </div>
     </footer>
   );
 };

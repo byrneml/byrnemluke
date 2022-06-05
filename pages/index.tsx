@@ -35,8 +35,8 @@ const IndexPage = () => (
               {index > 0 && ", "}
               <ExternalLink
                 href={company.href}
-                linkStyles="no-underline hover:underline decoration-black underline-offset-2"
-                textStyles="text-black font-semibold italic"
+                linkStyles="no-underline hover:underline decoration-black underline-offset-4 dark:decoration-white"
+                textStyles="text-black font-semibold italic dark:text-white"
                 text={company.name}
               />
             </span>
