@@ -12,5 +12,6 @@ export type Config = {
 export type ExternalLinkProps = {
   href: string;
   text: string;
-  styles: string;
+  linkStyles: string;
+  textStyles: string;
 };
