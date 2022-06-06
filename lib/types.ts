@@ -15,3 +15,7 @@ export type ExternalLinkProps = {
   linkStyles: string;
   textStyles: string;
 };
+
+export type NavBarProps = {
+  navItems: Array<{ label: string; href: string }>;
+};

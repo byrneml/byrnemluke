@@ -3,10 +3,12 @@ import Image from "next/image";
 import config from "@/data/config";
 import Link from "next/link";
 import clsx from "clsx";
+// import { MobileHeader } from "@/components/Layout/MobileHeader";
 
 export const Header: React.FC = () => {
   const { pathname } = useRouter();
 
+  console.log(pathname);
   return (
     <header className="py-8 flex justify-between items-center">
       <Link href="/">
@@ -24,6 +26,8 @@ export const Header: React.FC = () => {
         </a>
       </Link>
 
+      {/* <MobileHeader /> */}
+
       <nav>
         <ul className="flex space-x-8">
           {config.nav.map((item, index) => {
@@ -34,8 +38,9 @@ export const Header: React.FC = () => {
                   <a
                     aria-current={isActive ? "page" : undefined}
                     className={clsx(
-                      "text-gray-500 hover:text-gray-900",
-                      "dark:text-gray-400 dark:hover:text-gray-300"
+                      pathname === item.href ? "font-semibold" : "",
+                      "text-black hover:text-gray-900",
+                      "dark:text-gray-200 dark:hover:text-gray-100"
                     )}
                   >
                     {item.label}

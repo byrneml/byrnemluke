@@ -15,7 +15,7 @@ type Props = {
 
 const Layout = ({ title, description, children }: Props) => {
   return (
-    <div className="flex flex-col max-w-3xl mx-auto min-h-screen px-4">
+    <div className="flex flex-col max-w-3xl mx-auto min-h-screen px-6">
       <Header />
       <Page title={title} description={description} />
       {children}
