@@ -30,9 +30,9 @@ const ColorSwitcher = () => {
         onClick={() => changeTheme("light")}
         value={1}
         className={clsx(
-          "flex items-center   p-2 rounded-md text-sm w-auto",
-          `${theme === "light" ? "bg-gray-100 text-black" : ""}`,
-          "dark:text-white"
+          "flex items-center   p-2 rounded-md text-sm w-auto hover:bg-gray-100 hover:shadow-md",
+          `${theme === "light" ? "bg-gray-100 text-black shadow-md" : ""}`,
+          "dark:text-white dark:hover:bg-gray-700"
         )}
       >
         <Sun width="1rem" className="mr-2" />
@@ -43,9 +43,9 @@ const ColorSwitcher = () => {
         onClick={() => changeTheme("dark")}
         value={2}
         className={clsx(
-          "flex items-center  text-black p-2 rounded-md text-sm w-auto",
-          `${theme === "dark" ? "bg-gray-700 text-white" : ""}`,
-          "dark:text-white"
+          "flex items-center  text-black p-2 rounded-md text-sm w-auto mx-1 hover:bg-gray-100 hover:shadow-md",
+          `${theme === "dark" ? "bg-gray-700 text-white shadow-md" : ""}`,
+          "dark:text-white dark:hover:bg-gray-700"
         )}
       >
         <Moon width="1rem" className="mr-2" />
@@ -56,13 +56,13 @@ const ColorSwitcher = () => {
         onClick={() => changeTheme("system")}
         value={3}
         className={clsx(
-          "flex items-center   p-2 rounded-md text-sm w-auto",
+          "flex items-center p-2 rounded-md text-sm w-auto hover:shadow-lg hover:bg-gray-100 hover:shadow-md",
           `${
             theme === "system"
-              ? "bg-gray-100 text-black dark:bg-gray-700 dark:text-white"
+              ? "bg-gray-100 text-black dark:bg-gray-700 dark:text-white shadow-md"
               : ""
           }`,
-          "dark:text-white"
+          "dark:text-white dark:hover:bg-gray-700"
         )}
       >
         <Command width="1rem" className="mr-2" />
