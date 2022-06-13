@@ -8,9 +8,9 @@ const config: Config = {
     "Personal website, built with Next.js, MDX, and Tailwind CSS.",
   siteThumbnail: "/og-image.png",
   nav: [
-    { label: "Luke Michael Byrne", href: "/" },
-    // { label: "Projects", href: "/projects" },
-    // { label: "Posts", href: "/posts" },
+    { label: "About", href: "/" },
+    { label: "Projects", href: "/projects" },
+    { label: "Posts", href: "/posts" },
   ],
   socials: [
     { label: "github", href: "https://github.com/byrneml" },
