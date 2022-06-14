@@ -1,6 +1,6 @@
 import Link from "next/link";
 import config from "@/data/config";
-import Layout from "../components/Layout";
+import Layout from "@/components/Layout";
 import { Text } from "@/components/Text";
 import { ExternalLink } from "@/components/ExternalLink";
 
@@ -8,6 +8,7 @@ const IndexPage = () => (
   <Layout
     title="About"
     description="Hi! I’m Luke - I invest in developer tools & infrastructure for builders."
+    includeLine={true}
   >
     <Text>
       <p>

@@ -1,23 +1,20 @@
 import React, { ReactNode } from "react";
-import Link from "next/link";
-import Head from "next/head";
 import { Header } from "@/components/Layout/Header";
 import { Footer } from "@/components/Layout/Footer";
 import { Page } from "@/components/Layout/Page";
-import config from "@/data/config";
-import clsx from "clsx";
 
 type Props = {
   children?: ReactNode;
   title?: string;
   description?: string;
+  includeLine?: boolean;
 };
 
-const Layout = ({ title, description, children }: Props) => {
+const Layout = ({ title, description, children, includeLine }: Props) => {
   return (
-    <div className="flex flex-col max-w-3xl mx-auto h-screen px-6 overflow-auto">
+    <div className="flex flex-col max-w-3xl mx-auto h-screen px-6">
       <Header />
-      <Page title={title} description={description} />
+      <Page title={title} description={description} includeLine={includeLine} />
       {children}
       <Footer />
     </div>

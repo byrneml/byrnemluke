@@ -8,9 +8,15 @@ interface PageProps {
   title: string | React.ReactNode;
   description?: string | React.ReactNode;
   thumbnail?: string;
+  includeLine?: boolean;
 }
 
-export const Page: React.FC<PageProps> = ({ title, description, children }) => {
+export const Page: React.FC<PageProps> = ({
+  title,
+  description,
+  children,
+  includeLine,
+}) => {
   const metaTitle = onlyText(title);
   const metaDescription = onlyText(description);
   const metaThumbnail = config.siteThumbnail;
@@ -31,7 +37,7 @@ export const Page: React.FC<PageProps> = ({ title, description, children }) => {
       </Head>
       <header
         className={clsx(
-          "mb-8 pb-8 border-b",
+          includeLine ? "mb-8 pb-8 border-b" : "",
           "border-gray-200",
           "dark:border-gray-700"
         )}
