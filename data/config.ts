@@ -6,7 +6,6 @@ const config: Config = {
   siteName: "Luke Michael Byrne",
   siteDescription:
     "Personal website, built with Next.js, MDX, and Tailwind CSS.",
-  siteThumbnail: "/og-image.png",
   nav: [
     { label: "About", href: "/" },
     { label: "Projects", href: "/projects" },
