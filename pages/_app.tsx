@@ -5,10 +5,9 @@ import "../styles/global.css";
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <ThemeProvider
-      disableTransitionOnChange
       storageKey="theme"
-      defaultTheme="system"
       enableSystem={true}
+      defaultTheme="dark"
       attribute="class"
     >
       <Component {...pageProps} />

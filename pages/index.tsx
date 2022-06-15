@@ -1,4 +1,3 @@
-import Link from "next/link";
 import config from "@/data/config";
 import Layout from "@/components/Layout";
 import { Text } from "@/components/Text";
