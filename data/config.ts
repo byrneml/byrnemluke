@@ -8,7 +8,7 @@ const config: Config = {
     "Personal website, built with Next.js, MDX, and Tailwind CSS.",
   nav: [
     { label: "About", href: "/" },
-    { label: "Projects", href: "/projects" },
+    // { label: "Projects", href: "/projects" },
     { label: "Posts", href: "/posts" },
   ],
   socials: [

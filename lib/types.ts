@@ -18,3 +18,8 @@ export type ExternalLinkProps = {
 export type NavBarProps = {
   navItems: Array<{ label: string; href: string }>;
 };
+
+export type PostCardProps = {
+  title: string;
+  description: string;
+};
