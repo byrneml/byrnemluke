@@ -7,7 +7,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <ThemeProvider
       storageKey="theme"
       enableSystem={true}
-      defaultTheme="dark"
+      defaultTheme="system"
       attribute="class"
     >
       <Component {...pageProps} />
