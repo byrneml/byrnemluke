@@ -7,6 +7,7 @@ function MyApp({ Component, pageProps }: AppProps) {
     <ThemeProvider
       disableTransitionOnChange
       storageKey="theme"
+      defaultTheme="system"
       attribute="class"
     >
       <Component {...pageProps} />
