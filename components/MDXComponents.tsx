@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { GitHub } from "react-feather";
 
 function Callout(props) {
   return (
@@ -22,8 +23,29 @@ const CustomLink = (props) => (
   />
 );
 
+function GithubLink(props) {
+  return (
+    <a
+      href={props.href}
+      target="_blank"
+      className="mb-6 block no-underline p-4 bg-white rounded-lg border border-gray-200 shadow-sm hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
+    >
+      <div className="flex items-center mb-1">
+        <GitHub className="mr-2 mt-1 w-4" />
+        <h5 className="text-lg font-semibold tracking-tight text-gray-900 dark:text-white">
+          {props.title}
+        </h5>
+      </div>
+      <p className="font-normal text-gray-700 dark:text-gray-400 m-0 p-0 no-underline">
+        {props.body}
+      </p>
+    </a>
+  );
+}
+
 const allMDXComponents = {
   Callout,
+  GithubLink,
   h4: HeadingFour,
   a: CustomLink,
 };

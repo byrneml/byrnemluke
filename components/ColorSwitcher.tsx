@@ -5,7 +5,7 @@ import clsx from "clsx";
 
 const ColorSwitcher = () => {
   const [mounted, setMounted] = useState(false);
-  const { theme: activeTheme, themes, setTheme } = useTheme();
+  const { theme: activeTheme, setTheme } = useTheme();
 
   useEffect(() => {
     setMounted(true);
