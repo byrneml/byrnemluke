@@ -5,11 +5,10 @@ import clsx from "clsx";
 
 const ColorSwitcher = () => {
   const [mounted, setMounted] = useState(false);
-  const { systemTheme, theme, setTheme } = useTheme();
+  const { theme: activeTheme, themes, setTheme } = useTheme();
 
   useEffect(() => {
     setMounted(true);
-    setTheme(localStorage.getItem("theme"));
   }, []);
 
   function changeTheme(theme: string) {
@@ -31,7 +30,9 @@ const ColorSwitcher = () => {
         value={1}
         className={clsx(
           "flex items-center   p-2 rounded-md text-sm w-auto hover:bg-gray-100 hover:shadow-md",
-          `${theme === "light" ? "bg-gray-100 text-black shadow-md" : ""}`,
+          `${
+            activeTheme === "light" ? "bg-gray-100 text-black shadow-md" : ""
+          }`,
           "dark:text-white dark:hover:bg-gray-700"
         )}
       >
@@ -44,7 +45,7 @@ const ColorSwitcher = () => {
         value={2}
         className={clsx(
           "flex items-center  text-black p-2 rounded-md text-sm w-auto mx-1 hover:bg-gray-100 hover:shadow-md",
-          `${theme === "dark" ? "bg-gray-700 text-white shadow-md" : ""}`,
+          `${activeTheme === "dark" ? "bg-gray-700 text-white shadow-md" : ""}`,
           "dark:text-white dark:hover:bg-gray-700"
         )}
       >
@@ -58,7 +59,7 @@ const ColorSwitcher = () => {
         className={clsx(
           "flex items-center p-2 rounded-md text-sm w-auto hover:shadow-lg hover:bg-gray-100 hover:shadow-md",
           `${
-            theme === "system"
+            activeTheme === "system"
               ? "bg-gray-100 text-black dark:bg-gray-700 dark:text-white shadow-md"
               : ""
           }`,

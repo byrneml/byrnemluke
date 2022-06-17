@@ -1,5 +1,5 @@
 import { Twitter, GitHub, Linkedin } from "react-feather";
-// import Theme from "@/components/ColorSwitcher";
+import ColorSwitcher from "@/components/ColorSwitcher";
 import config from "@/data/config";
 import clsx from "clsx";
 
@@ -32,7 +32,9 @@ export const Footer: React.FC = () => {
           );
         })}
       </ul>
-      <div className="mt-8 flex justify-center">{/* <Theme /> */}</div>
+      <div className="mt-8 flex justify-center">
+        <ColorSwitcher />
+      </div>
     </footer>
   );
 };
