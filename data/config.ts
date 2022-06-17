@@ -2,13 +2,12 @@ import type { Config } from "@/lib/types";
 
 const config: Config = {
   avatar: "/avatar.jpg",
-  siteUrl: "https://nextjs-mdx-blog-theme.vercel.app",
+  siteUrl: "https://byrnemluke.com",
   siteName: "Luke Michael Byrne",
   siteDescription:
     "Personal website, built with Next.js, MDX, and Tailwind CSS.",
   nav: [
     { label: "About", href: "/" },
-    // { label: "Projects", href: "/projects" },
     { label: "Posts", href: "/posts" },
   ],
   socials: [
