@@ -15,6 +15,7 @@ const PostsPage = ({ posts }) => {
         {posts.map((post, index) => {
           return (
             <PostCard
+              key={index}
               title={post.data.title}
               description={post.data.description}
             />
