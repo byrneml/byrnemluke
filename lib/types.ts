@@ -3,7 +3,6 @@ export type Config = {
   siteUrl: string;
   siteName: string;
   siteDescription: string;
-  siteThumbnail: string;
   nav: Array<{ label: string; href: string }>;
   socials: Array<{ label: string; href: string }>;
   portfolio: Array<{ name: string; href: string }>;
@@ -18,4 +17,9 @@ export type ExternalLinkProps = {
 
 export type NavBarProps = {
   navItems: Array<{ label: string; href: string }>;
+};
+
+export type PostCardProps = {
+  title: string;
+  description: string;
 };
