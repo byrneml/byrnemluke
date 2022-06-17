@@ -19,6 +19,7 @@ const config: Config = {
   portfolio: [
     { name: "Northflank", href: "https://northflank.com" },
     { name: "Feathery", href: "https://feathery.io" },
+    { name: "Dynaboard", href: "https://dynaboard.com" },
     { name: "WorldQL", href: "https://worldql.com" },
     { name: "Grafbase", href: "https://grafbase.com" },
     { name: "Cloudsmith", href: "https://cloudsmith.com" },

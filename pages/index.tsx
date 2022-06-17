@@ -15,10 +15,12 @@ const IndexPage = () => (
         <a
           href="https://tapestry.vc"
           target="_blank"
-          className="no-underline hover:underline decoration-indigo-500 underline-offset-2"
+          className="no-underline hover:underline decoration-black dark:decoration-blue-400 underline-offset-2"
         >
           {" "}
-          <span className="text-indigo-500 font-semibold italic">Tapestry</span>
+          <span className="text-black dark:text-blue-400 font-semibold italic">
+            Tapestry
+          </span>
         </a>
         , a seed-stage fund. I split my time between investing & researching
         (80%) and hacking on side projects/new technologies (20%). Some things
