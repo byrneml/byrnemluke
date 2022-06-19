@@ -164,9 +164,13 @@ Wasm has a similar promise to the JVM and depending on where on the web you land
 
 Lots of companies are using Wasm in production, the below are just a couple of the ones that I’ve been tracking.
 
-#### _Dynaboard_
+#### _Dynaboard\*_
 
 Dynaboard uses WebAssembly for its plugin system. All user-supplied code runs in a Wasm sandbox. They chose WebAssembly over a few other options ([ShadowRealms](https://github.com/tc39/proposal-shadowrealm), Inline Frames on a separate host with native JS eval(), a Custom DSL) because it is generally more performant, makes it simple to support multiple languages, and is easier to implement.
+
+#### _Grafbase\*_
+
+Grafbase deploys your GraphQL API to the edge via Wasm to achieve globally fast performance without cold starts. Soon, they'll offer the ability to write custom GraphQL resolvers using JavaScript or any language that compiles Wasm.
 
 #### _Suborbital_
 
