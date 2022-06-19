@@ -7,7 +7,11 @@ import Layout from "@/components/Layout";
 
 const Post = ({ data, content }) => {
   return (
-    <Layout includeLine={false}>
+    <Layout
+      title={data.title}
+      description={data.description}
+      includeLine={false}
+    >
       <h1 className="font-bold text-4xl mt-6 mb-6">{data.title}</h1>
       <time className="text-gray-500 italic">{data.date}</time>
       <span className="prose max-w-none prose-md mt-8 dark:prose-invert">
