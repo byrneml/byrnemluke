@@ -119,6 +119,11 @@
     "@nodelib/fs.scandir" "2.1.5"
     fastq "^1.6.0"
 
+"@sentry/types@^6.11.0":
+  version "6.19.7"
+  resolved "https://registry.yarnpkg.com/@sentry/types/-/types-6.19.7.tgz#c6b337912e588083fc2896eb012526cf7cfec7c7"
+  integrity sha512-jH84pDYE+hHIbVnab3Hr+ZXr1v8QABfhx39KknxqKWr2l0oEItzepV0URvbEhB446lk/S/59230dlUUIBGsXbg==
+
 "@tailwindcss/typography@^0.5.2":
   version "0.5.2"
   resolved "https://registry.yarnpkg.com/@tailwindcss/typography/-/typography-0.5.2.tgz#24b069dab24d7a2467d01aca0dd432cb4b29f0ee"
@@ -546,6 +551,11 @@ fastq@^1.6.0:
   integrity sha512-YpkpUnK8od0o1hmeSc7UUs/eB/vIPWJYjKck2QKIzAf71Vm1AAQ3EbuZB3g2JIy+pg+ERD0vqI79KyZiB2e2Nw==
   dependencies:
     reusify "^1.0.4"
+
+fflate@^0.4.1:
+  version "0.4.8"
+  resolved "https://registry.yarnpkg.com/fflate/-/fflate-0.4.8.tgz#f90b82aefbd8ac174213abb338bd7ef848f0f5ae"
+  integrity sha512-FJqqoDBR00Mdj9ppamLa/Y7vxm+PRmNWA67N846RvsoYVMKB4q3y/de5PA7gUmRMYK/8CMz2GDZQmCRN1wBcWA==
 
 fill-range@^7.0.1:
   version "7.0.1"
@@ -1224,6 +1234,13 @@ next-themes@^0.2.0:
   resolved "https://registry.yarnpkg.com/next-themes/-/next-themes-0.2.0.tgz#fdc507f61e95b3ae513dee8d4783bcec8c02e3a3"
   integrity sha512-myhpDL4vadBD9YDSHiewqvzorGzB03N84e+3LxCwHRlM/hiBOaW+UsKsQojQAzC7fdcJA0l2ppveXcYaVV+hxQ==
 
+next-use-posthog@^1.16.0:
+  version "1.16.0"
+  resolved "https://registry.yarnpkg.com/next-use-posthog/-/next-use-posthog-1.16.0.tgz#19319435bf36f64aae43eb94c49da72cc659689e"
+  integrity sha512-nEv+0c/m06/uImJTZ8llg+Pr5thMOyGEjKzXZK31UqVf+/bhbsG4mDFP4yJyDC02+U3tb1c3wW/IN0XY7Kn9lw==
+  dependencies:
+    posthog-js "1.16.0"
+
 next@latest:
   version "12.1.6"
   resolved "https://registry.yarnpkg.com/next/-/next-12.1.6.tgz#eb205e64af1998651f96f9df44556d47d8bbc533"
@@ -1362,6 +1379,15 @@ postcss@^8.4.12, postcss@^8.4.14:
     picocolors "^1.0.0"
     source-map-js "^1.0.2"
 
+posthog-js@1.16.0:
+  version "1.16.0"
+  resolved "https://registry.yarnpkg.com/posthog-js/-/posthog-js-1.16.0.tgz#60c24151d42f147b8513ecd0d41c768dc7c374ec"
+  integrity sha512-7gE4fDSCD7wzdr+Jb/dOIqUubsc4ahnyJYXKudDF+LcuhGX8qP8wRj8WA6JtyQDS1mqSH3Y+AwOWzfC9W8UIMQ==
+  dependencies:
+    "@sentry/types" "^6.11.0"
+    fflate "^0.4.1"
+    rrweb-snapshot "^1.1.7"
+
 prop-types@^15.7.2:
   version "15.8.1"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.8.1.tgz#67d87bf1a694f48435cf332c24af10214a3140b5"
@@ -1467,6 +1493,11 @@ reusify@^1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/reusify/-/reusify-1.0.4.tgz#90da382b1e126efc02146e90845a88db12925d76"
   integrity sha512-U9nH88a3fc/ekCF1l0/UP1IosiuIjyTh7hBvXVMHYgVcfGvt897Xguj2UOLDeI5BG2m7/uwyaLVT6fbtCwTyzw==
+
+rrweb-snapshot@^1.1.7:
+  version "1.1.14"
+  resolved "https://registry.yarnpkg.com/rrweb-snapshot/-/rrweb-snapshot-1.1.14.tgz#9d4d9be54a28a893373428ee4393ec7e5bd83fcc"
+  integrity sha512-eP5pirNjP5+GewQfcOQY4uBiDnpqxNRc65yKPW0eSoU1XamDfc4M8oqpXGMyUyvLyxFDB0q0+DChuxxiU2FXBQ==
 
 run-parallel@^1.1.9:
   version "1.2.0"
