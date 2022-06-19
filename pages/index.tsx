@@ -47,10 +47,7 @@ const IndexPage = () => (
         . Full list coming soon.
       </p>
       <p>
-        In my spare time, I work on side projects. For most of 2021, I worked on
-        Packages, and now I’m working on Paper, an open-source documentation
-        platform. I also maintain Github quarterly, a breakdown of the fastest
-        growing open-source projects.
+        In my spare time, I work on side projects. More on this coming soon!
       </p>
     </Text>
   </Layout>
