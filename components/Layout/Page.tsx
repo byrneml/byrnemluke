@@ -36,8 +36,8 @@ export const Page: React.FC<PageProps> = ({
           "dark:border-gray-700"
         )}
       >
-        <h1 className="font-bold text-3xl">{title}</h1>
-        {description ? (
+        {includeLine ? <h1 className="font-bold text-3xl">{title}</h1> : null}
+        {description && includeLine ? (
           <div className="mt-4">
             <Text>
               <p>{description}</p>
