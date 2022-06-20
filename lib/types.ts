@@ -23,7 +23,3 @@ export type PostCardProps = {
   title: string;
   description: string;
 };
-
-export type SubscribeProps = {
-  email: string;
-};
