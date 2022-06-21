@@ -26,11 +26,11 @@ One more thing to note: Wasm was originally built for the browser, but as the te
 
 So, Wasm lets you write code in the language of your choice and run it anywhere. What makes it interesting?
 
-**_Fast(er) startup times_**
+#### _Fast(er) startup times_
 
 On the server, Wasm can achieve 10-100x faster cold start times vs Docker Containers, because it does not need to create an OS Process for every container. In the browser, decoding Wasm is faster than parsing, interpreting & optimizing Javascript, so your Wasm code begins executing faster in the browser than JavaScript does.
 
-**_Near-Native performance_**
+#### _Near-Native performance_
 
 There is some debate around the specifics of Wasm's performance, but where it can excel is in allowing users to offload computationally intensive parts of their applications to lower-level languages.
 
