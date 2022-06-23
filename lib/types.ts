@@ -5,7 +5,12 @@ export type Config = {
   siteDescription: string;
   nav: Array<{ label: string; href: string }>;
   socials: Array<{ label: string; href: string }>;
-  portfolio: Array<{ name: string; href: string }>;
+  portfolio: Array<{
+    name: string;
+    href: string;
+    date: string;
+    description: string;
+  }>;
 };
 
 export type ExternalLinkProps = {
@@ -22,4 +27,11 @@ export type NavBarProps = {
 export type PostCardProps = {
   title: string;
   description: string;
+};
+
+export type PortfolioCardProps = {
+  title: string;
+  url: string;
+  description: string;
+  dateInvested: string;
 };
