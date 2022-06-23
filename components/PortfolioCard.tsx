@@ -12,7 +12,7 @@ export const PortfolioCard: React.FC<PortfolioCardProps> = ({
     <a
       href={url}
       target="_blank"
-      className="block p-4  bg-white rounded-lg shadow-md hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
+      className="block no-underline p-4 bg-white rounded-lg border border-gray-200  hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
     >
       <h5 className="mb-1 text-xl font-bold tracking-tight text-gray-900 dark:text-white">
         {title}
