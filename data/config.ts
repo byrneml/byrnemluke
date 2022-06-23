@@ -70,18 +70,6 @@ const config: Config = {
       date: "Mar 2020",
       description: "Mobile experiences without code",
     },
-    {
-      name: "Stealth",
-      href: "https://",
-      date: "May 2022",
-      description: "Day 2 Kubernetes operations",
-    },
-    {
-      name: "Stealth",
-      href: "https://",
-      date: "May 2022",
-      description: "The reactive programming company",
-    },
   ],
 };
 export default config;
