@@ -11,15 +11,15 @@ const IndexPage = () => (
   >
     <Text>
       <p>
-        I’m a partner at{" "}
+        I’m a General partner at{" "}
         <a
-          href="https://tapestry.vc"
+          href="https://pebblebed.com"
           target="_blank"
           className="no-underline hover:underline decoration-black dark:decoration-blue-400 underline-offset-2"
         >
           {" "}
           <span className="text-black dark:text-blue-400 font-semibold italic">
-            Tapestry
+            pebblebed
           </span>
         </a>
         , a seed-stage fund. I split my time between investing & researching
@@ -29,7 +29,7 @@ const IndexPage = () => (
       </p>
       <p>
         I’m lucky to work with some amazing companies - some of the companies
-        I’ve invested in include{" "}
+        I’ve invested in in the past include{" "}
         {config.portfolio.map((company, index) => {
           return (
             <span key={index}>
