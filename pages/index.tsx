@@ -23,7 +23,7 @@ const IndexPage = () => (
           </span>
         </a>
         , a seed-stage fund. I split my time between investing in & working with founders,
-        and hacking on side projects/new technologies
+        and hacking on side projects/new technologies.
       </p>
       <p>
         I’m lucky to work with some amazing companies - some of the companies
