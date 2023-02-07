@@ -22,10 +22,8 @@ const IndexPage = () => (
             pebblebed
           </span>
         </a>
-        , a seed-stage fund. I split my time between investing & researching
-        (80%) and hacking on side projects/new technologies (20%). Some things
-        that excite me at the moment: WebAssembly, Low Code, Cloud 2.0, and more
-        broadly, the future of computing.
+        , a seed-stage fund. I split my time between investing in & working with founders,
+        and hacking on side projects/new technologies
       </p>
       <p>
         I’m lucky to work with some amazing companies - some of the companies
