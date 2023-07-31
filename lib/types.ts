@@ -35,3 +35,8 @@ export type PortfolioCardProps = {
   description: string;
   dateInvested: string;
 };
+
+export type LogoProps = {
+  children?: React.ReactNode;
+  className?: string;
+};

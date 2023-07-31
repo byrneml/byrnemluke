@@ -23,7 +23,7 @@ export const Footer: React.FC = () => {
                 className={clsx(
                   "w-8 h-8 grid place-items-center rounded-md",
                   "bg-gray-900 text-gray-50",
-                  "dark:bg-gray-600 dark:text-gray-50"
+                  "dark:bg-gray-800"
                 )}
               >
                 {socialIcons[item.label]}
