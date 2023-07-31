@@ -63,7 +63,7 @@ const IndexPage = () => (
             target="_blank"
             className="no-underline hover:underline decoration-black dark:decoration-blue-400 underline-offset-2"
           >
-            <Badge href="https://pebblebed.com">
+            <Badge>
               <Pebblebed className="w-4 h-4 mr-1" />
               <Text className="font-regular text-xs">Pebblebed</Text>
             </Badge>
