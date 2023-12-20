@@ -1,17 +1,11 @@
-import Link from "next/link";
-import config from "@/data/config";
 import Layout from "@/components/Layout";
 import { PostCard } from "@/components/PostsCard";
 import getPosts from "@/lib/getPosts";
 
 const PostsPage = ({ posts }) => {
   return (
-    <Layout
-      title="Posts"
-      description="Things I'm researching"
-      includeLine={true}
-    >
-      <div>
+    <Layout between={false}>
+      <div className="pt-8">
         {posts.map((post, index) => {
           return (
             <PostCard

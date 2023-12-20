@@ -1,22 +1,23 @@
 import React, { ReactNode } from "react";
 import { Header } from "@/components/Layout/Header";
 import { Footer } from "@/components/Layout/Footer";
-import { Page } from "@/components/Layout/Page";
+import clsx from "clsx";
 
 type Props = {
   children?: ReactNode;
-  title?: string;
-  description?: string;
-  includeLine?: boolean;
+  between?: boolean;
 };
 
-const Layout = ({ title, description, children, includeLine }: Props) => {
+const Layout = ({ children, between }: Props) => {
   return (
-    <div className="flex flex-col max-w-3xl mx-auto h-screen px-6">
+    <div
+      className={clsx(
+        between ? "justify-between" : "",
+        "flex flex-col w-screen max-w-[96rem] mx-auto h-screen max-h-screen lg:max-h-[1000px] px-5 pb-8 lg:px-16 lg:pb-16"
+      )}
+    >
       <Header />
-      <Page title={title} description={description} includeLine={includeLine} />
       {children}
-      <Footer />
     </div>
   );
 };

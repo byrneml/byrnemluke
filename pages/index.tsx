@@ -1,40 +1,6 @@
-import config from "@/data/config";
-import { Text } from "@/components/Text";
-import { Header } from "@/components/Layout/Header";
-
-import {
-  Northflank,
-  Feathery,
-  Cloudsmith,
-  Pebblebed,
-  nMachine,
-  Dynaboard,
-  MetaMap,
-  Dylibso,
-  Grafbase,
-  Oxen,
-} from "@/components/Logos";
+import Layout from "@/components/Layout";
 
 import clsx from "clsx";
-
-interface BadgeProps {
-  children?: React.ReactNode;
-  className?: string;
-}
-
-export const Badge: React.FC<BadgeProps> = ({ children, className }) => {
-  return (
-    <a
-      target="_blank"
-      className={clsx(
-        "align-middle border border-gray-200 dark:border-gray-700 bg-neutral-50 dark:bg-black rounded py-1 px-1.5 font-regular text-gray-100 text-xs inline-flex items-center no-underline dark:hover:bg-gray-800 hover:bg-gray-200",
-        className
-      )}
-    >
-      {children}
-    </a>
-  );
-};
 
 const Hero = () => {
   return (
@@ -75,10 +41,9 @@ const Hero = () => {
 };
 const IndexPage = () => {
   return (
-    <div className="flex flex-col justify-between w-screen max-w-[96rem] mx-auto h-screen max-h-screen lg:max-h-[1000px] px-5 pb-8 lg:px-16 lg:pb-16">
-      <Header />
+    <Layout between={true}>
       <Hero />
-    </div>
+    </Layout>
   );
 };
 

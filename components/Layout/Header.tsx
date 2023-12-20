@@ -29,7 +29,7 @@ export const Header: React.FC = () => {
           <Link href="/">
             <a className="block lg:hidden text-xl">LB</a>
           </Link>
-          <ul className="md:space-x-8 flex flex-col md:flex-row sm:ml-6 text-right">
+          <ul className="space-y-2 md:space-y-0 md:space-x-8 flex flex-col md:flex-row sm:ml-6 text-right">
             {config.nav.map((item, index) => {
               const isActive = item.href === pathname;
               return (
