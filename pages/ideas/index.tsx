@@ -20,7 +20,7 @@ const Ideas = ({ ideas, content }) => {
                 </span>
               </Link>
             </div>
-            <div className="flex flex-col lg:row justify-between items-start lg:items-center">
+            <div className="flex flex-col lg:row justify-between items-start">
               <span className="text-gray-400">{idea.data.description}</span>
               <span className="flex-grow align-self-end border-t border-gray-700 mx-4"></span>{" "}
               <span className="text-gray-500">{idea.data.date}</span>{" "}
