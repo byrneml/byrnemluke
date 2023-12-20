@@ -1,5 +1,5 @@
 import { PostCardProps } from "@/lib/types";
-import { Text } from "@/components/Text";
+
 import Link from "next/link";
 
 export const PostCard: React.FC<PostCardProps> = ({ title, description }) => {
@@ -9,9 +9,7 @@ export const PostCard: React.FC<PostCardProps> = ({ title, description }) => {
         <h3 className="text-xl font-semibold group-hover:text-green">
           {title}
         </h3>
-        <Text>
-          <p className="mt-2">{description}</p>
-        </Text>
+        <p className="mt-2">{description}</p>
       </div>
     </Link>
   );

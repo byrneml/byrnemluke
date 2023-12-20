@@ -2,11 +2,17 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 
-const getPost = (slug: String) => {
-  const fileContents = fs.readFileSync(
-    path.join(`data/posts/${slug}.mdx`),
-    "utf8"
-  );
+interface PostContent {
+  data: matter.GrayMatterFile<string>["data"];
+  content: string;
+}
+
+const getPost = (folderPath: string, slug: string): PostContent => {
+  // Construct the full path to the file
+  const filePath = path.join(folderPath, `${slug}.mdx`);
+  // Read the file contents
+  const fileContents = fs.readFileSync(filePath, "utf8");
+  // Use gray-matter to parse the post metadata section
   const { data, content } = matter(fileContents);
   return {
     data,

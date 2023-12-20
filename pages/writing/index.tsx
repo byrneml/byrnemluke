@@ -1,6 +1,6 @@
 import Layout from "@/components/Layout";
-import { PostCard } from "@/components/PostsCard";
-import getPosts from "@/lib/getPosts";
+import { PostCard } from "@/components/Writing/PostsCard";
+import getMarkdownFilesData from "@/lib/getMarkdownFilesData";
 
 const PostsPage = ({ posts }) => {
   return (
@@ -23,7 +23,7 @@ const PostsPage = ({ posts }) => {
 export default PostsPage;
 
 export const getStaticProps = () => {
-  const posts = getPosts();
+  const posts = getMarkdownFilesData("./data/posts");
 
   return {
     props: {
