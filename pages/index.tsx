@@ -1,6 +1,6 @@
 import config from "@/data/config";
-import Layout from "@/components/Layout";
 import { Text } from "@/components/Text";
+import { Header } from "@/components/Layout/Header";
 
 import {
   Northflank,
@@ -14,6 +14,7 @@ import {
   Grafbase,
   Oxen,
 } from "@/components/Logos";
+
 import clsx from "clsx";
 
 interface BadgeProps {
@@ -48,61 +49,107 @@ const logos = {
   Oxen: Oxen,
 };
 
-const IndexPage = () => (
-  <Layout
-    title="About"
-    description="Hi! I’m Luke - I invest in computing infrastructure platforms."
-    includeLine={true}
-  >
-    <Text>
-      <p>
-        I’m a General partner at{" "}
-        <span className="inline-flex items-center">
-          <a
-            href="https://pebblebed.com"
-            target="_blank"
-            className="no-underline hover:underline decoration-black dark:decoration-blue-400 underline-offset-2"
-          >
-            <Badge>
-              <Pebblebed className="w-4 h-4 mr-1" />
-              <Text className="font-regular text-xs">Pebblebed</Text>
-            </Badge>
-          </a>
+// const IndexPage = () => (
+//   <Layout
+//     title="About"
+//     description="Hi! I’m Luke - I invest in computing infrastructure platforms."
+//     includeLine={true}
+//   >
+//     <Text>
+//       <p>
+//         I’m a General partner at{" "}
+//         <span className="inline-flex items-center">
+//           <a
+//             href="https://pebblebed.com"
+//             target="_blank"
+//             className="no-underline hover:underline decoration-black dark:decoration-blue-400 underline-offset-2"
+//           >
+//             <Badge>
+//               <Pebblebed className="w-4 h-4 mr-1" />
+//               <Text className="font-regular text-xs">Pebblebed</Text>
+//             </Badge>
+//           </a>
+//         </span>
+//         . I split my time between working with founders, building companies, and
+//         hacking on side projects/new technologies.
+//       </p>
+
+//       <p>
+//         I’m lucky to work with some amazing companies - some of the companies
+//         I’ve partnered with in the past include{" "}
+//         {config.portfolio.map((company, index) => {
+//           const LogoComponent = logos[company.name];
+//           return (
+//             <span key={index}>
+//               {/* Seperate each link by a comma  */}
+//               {index > 0 && ", "}
+
+//               <a
+//                 href={company.href}
+//                 target="_blank"
+//                 className="no-underline hover:underline decoration-black dark:decoration-blue-400 underline-offset-2"
+//               >
+//                 <Badge>
+//                   {LogoComponent && <LogoComponent className="w-4 h-4 mr-1" />}
+//                   <Text className="font-regular text-xs">{company.name}</Text>
+//                 </Badge>
+//               </a>
+//             </span>
+//           );
+//         })}
+//         . Full list coming soon.
+//       </p>
+//       <p>
+//         In my spare time, I work on side projects. More on this coming soon!
+//       </p>
+//     </Text>
+//   </Layout>
+// );
+
+const Hero = () => {
+  return (
+    <div>
+      <h1 className="text-4xl 2xl:text-6xl leading-relaxed max-w-[600px] mb-2">
+        Engineer,{" "}
+        <span className="py-1 px-2 text-green bg-primary rounded-md">
+          Investor
         </span>
-        . I split my time between working with founders, building companies, and
-        hacking on side projects/new technologies.
-      </p>
+        , <br />
+        <span className="inline md:inline-block">& Company Builder.</span>
+      </h1>
 
-      <p>
-        I’m lucky to work with some amazing companies - some of the companies
-        I’ve partnered with in the past include{" "}
-        {config.portfolio.map((company, index) => {
-          const LogoComponent = logos[company.name];
-          return (
-            <span key={index}>
-              {/* Seperate each link by a comma  */}
-              {index > 0 && ", "}
-
-              <a
-                href={company.href}
-                target="_blank"
-                className="no-underline hover:underline decoration-black dark:decoration-blue-400 underline-offset-2"
-              >
-                <Badge>
-                  {LogoComponent && <LogoComponent className="w-4 h-4 mr-1" />}
-                  <Text className="font-regular text-xs">{company.name}</Text>
-                </Badge>
-              </a>
-            </span>
-          );
-        })}
-        . Full list coming soon.
+      <p className="text-lg leading-relaxed">
+        I’m an engineer & investor. I co-founded{" "}
+        <span className="py-1 px-2 text-green bg-primary rounded-md">
+          Pebblebed
+        </span>
+        , a new type of venture capital firm that builds and invests in
+        companies from the ground up. We lead pre-seed & seed rounds in
+        companies solving hard technical problems across many verticals. We’ve
+        partnered with companies like{" "}
+        <span className="py-1 px-2 text-green bg-primary rounded-md">
+          Northflank
+        </span>
+        ,{" "}
+        <span className="py-1 px-2 text-green bg-primary rounded-md">Krea</span>
+        ,{" "}
+        <span className="py-1 px-2 text-green bg-primary rounded-md">Lynq</span>
+        ,{" "}
+        <span className="py-1 px-2 text-green bg-primary rounded-md">
+          Meliora
+        </span>{" "}
+        and many more wonderful companies.
       </p>
-      <p>
-        In my spare time, I work on side projects. More on this coming soon!
-      </p>
-    </Text>
-  </Layout>
-);
+    </div>
+  );
+};
+const IndexPage = () => {
+  return (
+    <div className="flex flex-col justify-between w-screen max-w-[96rem] mx-auto h-screen max-h-screen lg:max-h-[1000px] px-5 pb-8 lg:px-16 lg:pb-16">
+      <Header />
+      <Hero />
+    </div>
+  );
+};
 
 export default IndexPage;
