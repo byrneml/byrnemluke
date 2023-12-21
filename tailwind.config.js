@@ -10,14 +10,16 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Inter var", ...defaultTheme.fontFamily.sans],
+        alice: ["Alice", ...defaultTheme.fontFamily.sans],
       },
     },
     colors: {
       ...colors,
-      white: "#F9FAFB",
-      black: "#121212",
+      white: "#FAFAFA",
+      black: "#000000",
       gray: colors.neutral,
+      green: "#5BC4B4",
+      primary: "#193933",
     },
   },
   plugins: [require("@tailwindcss/typography")],

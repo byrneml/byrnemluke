@@ -1,18 +1,14 @@
 import { MDXRemote } from "next-mdx-remote";
 import allMDXComponents from "@/components/MDXComponents";
 import getPost from "@/lib/getPost";
-import getPosts from "@/lib/getPosts";
+import getMarkdownFilesData from "@/lib/getMarkdownFilesData";
 import { serialize } from "next-mdx-remote/serialize";
 import Layout from "@/components/Layout";
 
 const Post = ({ data, content }) => {
   return (
-    <Layout
-      title={data.title}
-      description={data.description}
-      includeLine={false}
-    >
-      <h1 className="font-bold text-4xl mt-6 mb-6">{data.title}</h1>
+    <Layout between={false}>
+      <h1 className="font-bold text-4xl mt-16 mb-6">{data.title}</h1>
       <time className="text-gray-500 italic">{data.date}</time>
       <span className="prose max-w-none prose-md mt-8 dark:prose-invert">
         <MDXRemote {...content} components={allMDXComponents} />
@@ -24,7 +20,7 @@ const Post = ({ data, content }) => {
 export default Post;
 
 export const getStaticPaths = async () => {
-  const posts = await getPosts();
+  const posts = getMarkdownFilesData("./data/ideas"); // Assuming this function is synchronous
   const paths = posts.map((post) => ({ params: { slug: post.slug } }));
   return {
     paths,
@@ -33,7 +29,8 @@ export const getStaticPaths = async () => {
 };
 
 export const getStaticProps = async ({ params }) => {
-  const post = await getPost(params.slug);
+  // Pass the folder path to the getPost function
+  const post = getPost("./data/ideas", params.slug); // Assuming this function is synchronous
   const mdxSource = await serialize(post.content);
   return {
     props: {
