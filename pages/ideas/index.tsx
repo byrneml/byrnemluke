@@ -6,7 +6,6 @@ import { serialize } from "next-mdx-remote/serialize";
 import Link from "next/link";
 
 const Ideas = ({ ideas, content }) => {
-  console.log(content);
   return (
     <Layout between={false}>
       <div className="mt-8" />
@@ -14,7 +13,7 @@ const Ideas = ({ ideas, content }) => {
         return (
           <div className="flex flex-col py-2">
             <div className="w-full">
-              <Link href="/ideas/emergent-capabilities">
+              <Link href={`/ideas/${idea.slug}`}>
                 <span className="text-lg font-semibold hover:cursor-pointer hover:text-green">
                   {idea.data.title}
                 </span>
