@@ -32,10 +32,23 @@ const Ideas = ({ ideas, content }) => {
 };
 
 export default Ideas;
+// Update your Idea interface to include the 'order' field
+interface Idea {
+  data: {
+    title: string;
+    description: string;
+    content: string;
+    order: number;
+  };
+  slug: string;
+}
 
 export const getStaticProps = async () => {
-  const ideas = getMarkdownFilesData("./data/ideas");
-  const mdxSource = await serialize(ideas[0].data.content);
+  let ideas = getMarkdownFilesData("./data/ideas") as Idea[];
+
+  ideas = ideas.sort((a, b) => b.data.order - a.data.order);
+
+  const mdxSource = await serialize(ideas[0]?.data.content || "");
 
   return {
     props: {
