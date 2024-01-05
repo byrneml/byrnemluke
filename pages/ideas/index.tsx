@@ -32,7 +32,6 @@ const Ideas = ({ ideas, content }) => {
 };
 
 export default Ideas;
-// Update your Idea interface to include the 'order' field
 interface Idea {
   data: {
     title: string;
