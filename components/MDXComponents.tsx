@@ -16,7 +16,7 @@ function HeadingFour(props) {
 
 const CustomLink = (props) => (
   <a
-    className="text-gray-900 dark:text-blue-400 dark:no-underline hover:underline break-words"
+    className="text-gray-900 dark:text-green dark:no-underline hover:underline break-words"
     target="_blank"
     rel="noopener noreferrer"
     {...props}

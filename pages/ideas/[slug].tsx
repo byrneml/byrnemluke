@@ -10,7 +10,7 @@ const Post = ({ data, content }) => {
     <Layout between={false}>
       <h1 className="font-bold text-4xl mt-16 mb-6">{data.title}</h1>
       <time className="text-gray-500 italic">{data.date}</time>
-      <span className="prose max-w-none prose-md mt-8 dark:prose-invert">
+      <span className="prose max-w-none prose-md mt-8 dark:prose-invert pb-32">
         <MDXRemote {...content} components={allMDXComponents} />
       </span>
     </Layout>
