@@ -34,17 +34,12 @@ export const Header: React.FC = () => {
               const isActive = item.href === pathname;
               return (
                 <li key={index}>
-                  <Link href={item.href}>
-                    <a
-                      aria-current={isActive ? "page" : undefined}
-                      className={clsx(
-                        pathname === item.href ? "font-bold" : "",
-                        "text-black text-lg dark:text-gray-200 hover:text-green dark:hover:text-green"
-                      )}
-                    >
-                      {item.label}
-                    </a>
-                  </Link>
+                  <a
+                    href={item.href}
+                    className="text-lg hover:text-green dark:hover:text-green"
+                  >
+                    {item.label}
+                  </a>
                 </li>
               );
             })}

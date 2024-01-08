@@ -1,0 +1,74 @@
+---
+title: "Distribution is all you need"
+date: Jan 2023
+description: "Thoughts on distribution for AI startups"
+author: Luke Michael Byrne
+order: 5
+---
+
+I'm lucky to be in a job where I spend most of my time talking with and learning from founders. The most common topic we touch upon (once something has been built!) is distribution. I have learned a lot from speaking with awesome founders, so wanted to share my thoughts on distribution as it relates to AI startups.
+
+The latest AI models have already changed the way we work, and it genuinely feels like their impact on knowledge work is still in phase one of a much larger transformation of how humans view knowledge creation and consumption. A quick scan of Twitter at any given moment will show you dozens of people talking about the positive (and [negative](https://twitter.com/ylecun/status/1744347740740452399), depending on your perspective) impacts AI is having on how we work.
+Alongside language models, chat interfaces [ChatGPT](https://chat.openai.com), [Claude](https://claude.ai), [Bard](https://bard.google.com), [Pi](https://pi.ai), have become ubiquitous. These platforms all share a commonality; a massive model sitting under the hood that costs _a lot_ to train. OpenAI built a _novel_ product with ChatGPT, to the point that it feels like a benchmark - I know of very few large foundation model companies that don't have some sort of ChatGPT competitor.
+
+## How do model companies make money?
+
+OpenAI's unit economics, can be very loosely understood as:
+
+<Callout>💡 (cost to train model) + (cost to serve model) < API revenues + ChatGPT subscription revenues.</Callout>
+
+Assuming ChatGPT's $20/month subscription and GPT-4's ~two-year lifecycle (before
+GPT-5 -it will likely be longer), OpenAI would require approximately 103,000 ChatGPT
+Pro subscriptions over this period to recoup training costs. It's likely that OpenAI's
+architecture aims to align inference costs per user closely with the subscription
+fee. For their API, they likely charge a margin on compute for inference costs. Given
+ChatGPT alone has ~180M users and OpenAI just crossed $1.6Bn in revenue, I've got
+no doubt they'll get paid back on training costs. Their inference margins might also
+not be great yet, but I assume they will figure that out in time if that is the case.
+
+## The perils of larger models
+
+These numbers don't seem terrible, right? That's where you'd be wrong. OpenAI are in a race with large tech companies (Google), smaller companies (Anthropic, Inflection) continuously build better models. Scaling back their model size puts them behind their competitors. This means that they will need to keep raising money to build larger, likely more expensive models. This has been true for a while now - GPT-2 cost $50-$100k to train, GPT-3 cost ~$5M, and GPT-4 is rumoured to have cost ~$100M. How much is GPT-6 going to cost?
+OpenAI is not alone - [Gemini](https://blog.google/technology/ai/google-gemini-ai/) is a 1Tn+ parameter model, Google [PaLM](https://ai.google/discover/palm2/) is a 540Bn parameter model. Inflection-2 is 175Bn, and Anthropic's Claude is in the low hundreds of billions of parameters. These companies are competing on building massive GPU clusters and training larger models while simultaneously competing on the product side.
+
+## Enter Meta, Microsoft, Apple
+
+One somewhat surprising happening during this period of growth in AI is how different of an approach some of the industry titans are taking.
+
+### Meta
+
+Meta has fully embraced open-source, and they are doing incredible work. [Pytorch](https://pytorch.org), [Llama](https://ai.meta.com/resources/models-and-libraries/llama/), [Segment Anything](https://segment-anything.com/), [Seamless](https://ai.meta.com/research/seamless-communication/) and so many more projects have pushed them far beyond anyone else when it comes to open source.
+
+### Microsoft
+
+Microsoft are playing chess - they have committed $13Bn to OpenAI for 49% of its for-profit arm, released small models like [Orca](https://www.microsoft.com/en-us/research/blog/orca-2-teaching-small-language-models-how-to-reason/) & [Phi-2](https://www.microsoft.com/en-us/research/blog/phi-2-the-surprising-power-of-small-language-models/), and worked on agents with [AutoGen](https://www.microsoft.com/en-us/research/blog/autogen-enabling-next-generation-large-language-model-applications/). They also have the right to commercialize OpenAI's innovations, both past and future, and have deeply integrated GPT-4 into many of their products. More below.
+
+### Apple
+
+Apple has kept a lower profiel, but their release of [MLX](https://github.com/ml-explore/mlx) signals a focus on small, local-first, privacy-centric models, which fits well within their ethos. [Ferret](https://github.com/apple/ml-ferret) also looks interesting and is also small (7B, 13B checkpoints so far).
+
+You may have noticed that the above companies are focused on training & releasing much smaller models than OpenAI, Google, even Anthropic. Meta's models cap out at 70B, Microsoft's Phi-2 is a 2.7Bn parameter model (~630 times smaller than GPT-4). Meta is now rolling some of this work into their core products; my guess is they are hoping the OSS angle makes them appear more trustworthy given some of their past mishaps. I'm sure most of Apple's AI features will be powered by a model that they release that is _small_ and works _really well_ with their specialized chips.
+
+## Microsoft - the real winner
+
+Microsoft is the most interesting incumbent. They seem to somehow simultaneously be OpenAI's best-friend and largest threat. They have a ChatGPT competitor, [Microsoft Copilot](https://copilot.microsoft.com), they have their own [Azure AI Hub](https://azure.microsoft.com/en-us/products/ai-studio) that lets you work with OpenAI's models _and_ a host of other models from HuggingFace. They have also turned Bing into a generative-AI-first search engine, and were one of the first in the industry to do so.
+
+They have an incredible deal with OpenAI -> Microsoft gets special treatment, are set to make a real return on their investment, and seem to have no restrictions on what they can work on. They are letting OpenAI lay the groundwork and spend more-and-more on scaling artificial intelligence. If it works out, (1) they will get a massive payout, (2) they will still have special access, (3) they will be able to build their own SotA models whenever they want to, particularly as advancements in model improvements begin to stabilize.
+
+OpenAI will be a generational company - they already are. But, in an [anti-competitive world](https://www.figma.com/blog/figma-adobe-abandon-proposed-merger), it's impressive to see the work that companies like Meta, Microsoft and Apple are doing. I can't help but feel like Microsoft is going to be the company that _really_ wins, at least compared to their peers. They have the distribution, balance sheet, partnerships, and products to become one of the dominant players in shaping how we interact with AI.
+
+## Why small models at all?
+
+Diverging from the trend of larger models, it's intriguing to consider why Microsoft is exploring smaller models like Phi-2. It's wild that a 2.7 billion parameter model like Phi-2 demonstrates emergent capabilities, outperforming models 3-25x its size. This is significant not only due to the model's size but also because of the potential cost savings for Microsoft compared to paying inference on GPT-4. I doubt they're taking this too seriously right now, but it would be wild to see Microsoft put real resources into building something like a 12x 5B MoE model where each expert is trained with similar constraints to Phi-2.
+
+## Distribution is all you need
+
+OpenAI became the company that everyone knew _after_ ChatGPT launched. They built something novel, 100x better than anything on the market, and rapidly gained a distribution advantage. Microsoft, Google, Apple etc. already have _incredible_ distribution advantages. These companies are not entering the trillion parameter race yet; because they have such amazing distribution that they can start with smaller, less capable (but still great) models, and pour fuel on the proverbial scaling fire if and when they need to.
+
+## What this means for AI startups
+
+Architecting & training a model is a skillset AI startups will likely need. But do they need to do it _right now?_ Would they be better off building, for example, a product that is agnostic to its underlying model(s), such that you can get started with GPT-4, and start training their own once they start to build a distribution advantage? [Perplexity](https://perplexity.ai) took approach, and as far as I can tell, it has worked [pretty well](https://blog.perplexity.ai/blog/perplexity-raises-series-b-funding-round) for a company that officially launched a little over a year ago.
+
+## Thank you!
+
+If you made it this far, let's chat more. You can email me at [luke] at [pebblebed] dot com.

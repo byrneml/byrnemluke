@@ -8,13 +8,10 @@ const config: Config = {
     "Personal website, built with Next.js, MDX, and Tailwind CSS.",
   nav: [
     { label: "Ideas", href: "/ideas" },
-    { label: "Writing", href: "/writing" },
-  ],
-  socials: [
-    { label: "github", href: "https://github.com/byrneml" },
+    { label: "Github", href: "https://github.com/byrneml" },
     { label: "twitter", href: "https://twitter.com/byrnemluke" },
-    { label: "linkedin", href: "https://www.linkedin.com/in/byrnel/" },
   ],
+
   portfolio: [
     {
       name: "Northflank",

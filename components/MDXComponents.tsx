@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { GitHub } from "react-feather";
 
 function Callout(props) {
@@ -12,6 +11,10 @@ function Callout(props) {
 
 function HeadingFour(props) {
   return <h4 className="font-bold text-lg">{props.children}</h4>;
+}
+
+function HeadingTwo(props) {
+  return <h4 className="font-bold text-2xl">{props.children}</h4>;
 }
 
 const CustomLink = (props) => (
@@ -90,6 +93,7 @@ const allMDXComponents = {
   Callout,
   GithubLink,
   Subscribe,
+  h2: HeadingTwo,
   h4: HeadingFour,
   a: CustomLink,
 };
