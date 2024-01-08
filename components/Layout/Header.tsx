@@ -8,16 +8,6 @@ import React, { useState } from "react";
 export const Header: React.FC = () => {
   const { pathname } = useRouter();
 
-  const [isOpen, setIsOpen] = useState(false);
-
-  function toggleMenu() {
-    if (isOpen) {
-      setIsOpen(false);
-    } else {
-      setIsOpen(true);
-    }
-  }
-
   return (
     <>
       <nav className="py-6">
@@ -34,12 +24,21 @@ export const Header: React.FC = () => {
               const isActive = item.href === pathname;
               return (
                 <li key={index}>
-                  <a
-                    href={item.href}
-                    className="text-lg hover:text-green dark:hover:text-green"
-                  >
-                    {item.label}
-                  </a>
+                  {index != 0 ? (
+                    <a
+                      href={item.href}
+                      className="text-lg hover:text-green dark:hover:text-green"
+                      target="_blank"
+                    >
+                      {item.label}
+                    </a>
+                  ) : (
+                    <Link href={item.href}>
+                      <a className="text-lg hover:text-green dark:hover:text-green">
+                        {item.label}
+                      </a>
+                    </Link>
+                  )}
                 </li>
               );
             })}
