@@ -4,7 +4,6 @@ export type Config = {
   siteName: string;
   siteDescription: string;
   nav: Array<{ label: string; href: string }>;
-  socials: Array<{ label: string; href: string }>;
   portfolio: Array<{
     name: string;
     href: string;

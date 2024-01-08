@@ -1,6 +1,5 @@
 import React, { ReactNode } from "react";
 import { Header } from "@/components/Layout/Header";
-import { Footer } from "@/components/Layout/Footer";
 import clsx from "clsx";
 
 type Props = {
