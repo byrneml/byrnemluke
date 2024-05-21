@@ -1,0 +1,185 @@
+---
+title: "Questions About AI"
+description: An unfiltered list of questions I have about AI
+date: May 2024
+order: 4
+---
+
+This is a list of questions I have about AI inspired by conversations with technologists, founders, investors, and researchers. It is also inspired by [other lists](https://patrickcollison.com/questions) that I [find interesting](https://atelfo.github.io/2024/04/01/biotech-questions.html). It is an evergreen list that I'll continue to update as I learn more about AI - it is very much a list of questions - not answers. Please keep that in mind while you're reading!
+
+If you have thoughts about any of these questions, I would [love to hear them](https://x.com/byrnemluke).
+
+## Table of Contents
+
+1. [How much data actually exists in the world?](#how-much-data-actually-exists-in-the-world)
+2. [Can we generate useful synthetic data?](#can-we-generate-useful-synthetic-data)
+3. [How far can scaling compute get us?](#how-far-can-scaling-compute-get-us)
+4. [Llama3 8b is nearly as powerful as Llama2 70B. Will we see a useful 1B model that performs as well as 7-20B models soon?](#llama3-8b-is-nearly-as-powerful-as-llama2-70b-will-we-see-a-useful-1b-model-that-performs-as-well-as-7-20b-models-soon)
+5. [Does sub-quadratic scaling work?](#does-sub-quadratic-scaling-work)
+6. [Can we build mass-scale transformer-specific chips?](#can-we-build-mass-scale-transformer-specific-chips)
+7. [What is consciousness?](#what-is-consciousness)
+8. [When will we classify models as conscious, and what framework will we use to classify consciousness?](#when-will-we-classify-models-as-conscious-and-what-framework-will-we-use-to-classify-consciousness)
+9. [What do humans spend their time on in a post-AGI world?](#what-do-humans-spend-their-time-on-in-a-post-agi-world)
+10. [Will each major nation have their own foundation model?](#will-each-major-nation-have-their-own-foundation-model)
+11. [Will a Manhattan Project for AGI be formed in the near-future?](#will-a-manhattan-project-for-agi-be-formed-in-the-near-future)
+12. [How powerful will the largest private model owners become if they unlock AGI?](#how-powerful-will-the-largest-private-model-owners-become-if-they-unlock-agi)
+13. [How much of GDP expansion will be captured by big tech vs startups?](#how-much-of-gdp-expansion-will-be-captured-by-big-tech-vs-startups)
+14. [How will personal relationships evolve?](#how-will-personal-relationships-evolve)
+15. [Will we be able to have infinite personalization?](#will-we-be-able-to-have-infinite-personalization)
+16. [Should we be backing fiber companies?](#should-we-be-backing-fiber-companies)
+17. [Will we ever have quantum LLMs? Is QML Useful?](#will-we-ever-have-quantum-llms-is-qml-useful)
+18. [Will there be an AI Only Cloud?](#will-there-be-an-ai-only-cloud)
+19. [Who are the Patrons of this revolution? Who benefits from it? Who loses out from it?](#who-are-the-patrons-of-this-revolution)
+
+### How much data actually exists in the world? <a name="how-much-data-actually-exists-in-the-world" />
+
+GPT-4, Opus and similar models were trained on vast amounts of the world’s public data. What percentage of all usable data does their training set amount to? My intuition says low-double-digit percentage points. Another question would be how much high-quality data exists in the world; my suspicion is GPT-4’s training set is a significantly larger percentage of that number. What are the major untapped data siloes? Is somebody keeping a list of them somewhere? Examples:
+
+- Personal data (browser history, text messages, notes etc)
+- Video (Movie transcripts, YouTube etc.)
+- Private company data (emails, private Google Docs, Notion workspaces)
+- Domain specific datasets (Bloomberg data, a bank’s data, healthcare data etc)
+
+---
+
+### Can we generate useful synthetic data? <a name="can-we-generate-useful-synthetic-data" />
+
+Generating useful synthetic data using simulation engines has shown promising results in specific domains (thank you Waymo). Extending this approach to foundation models could be worth exploring, especially as multi-modal data becomes more important.
+
+There are several challenges to consider:
+
+1. Simulation engines need to get better (which is happening, reach out if you want to know more!)
+2. Ensuring the generated synthetic data is representative of real-world scenarios and edge cases
+3. Integrating synthetic data with real-world data
+
+There are also many potential benefits:
+
+1. Reduced reliance on real-world data, which can be difficult or expensive to generate/obtain
+2. Ability to generate diverse and targeted datasets for specific use cases
+3. Potential to create datasets for rare situations that are not captured in real-world data
+
+Many smart people disagree that this will be useful. I will leave it to those building the models and datasets who have a more informed opinion than me about this topic to decide, but it feels like it would be a useful experiment to run if we have good enough simulation engines that are easily accessible.
+
+---
+
+### How far can scaling compute get us? <a name="how-far-can-scaling-compute-get-us" />
+
+How far would a $10Bn training run get us? How would that model compare to GPT-4/Opus? Scaling compute is an interesting question because if it truly helps us 100x from here, we should probably do it. Will GPT-7 be a $10Bn training run backed by sophisticated world models? Once we get to that scale, what are the emergent capabilities we will see in models?
+
+There are holes to poke in this argument, but it can’t be denied that we have seen models grow tremendously even in scaling from GPT-3.5 → GPT-4o/Opus. Scaling compute 100x and seeing what other emergent capabilities these models exhibit is going to be fascinating.
+
+\* It's important to consider the potential limitations with scaling efforts. There may be diminishing returns as we push the boundaries of compute, and other bottlenecks, such as data availability and quality, could become more prominent.
+
+---
+
+### Is there a Moore's Law equivalent for model capabilites? <a name="is-there-a-moores-law-equivalent-for-model-capabilites" />
+
+Llama3 8B is nearly as powerful as Llama2 70B. There is a Moore’s Law style argument to be had here around model capabilities per iteration of model. Llama3 8B being close to Llama2 70B is the perfect example. In 2/3 model iterations, will Llama5 4B or Phi-5 1.5B be as powerful as, for example, Llama3 70B? Where does this cap out? What does this mean for the types of companies you could build if you had a local-first, privacy focused small model on your phone or laptop that was actually quite capable?
+
+---
+
+### Does sub-quadratic scaling work? <a name="does-sub-quadratic-scaling-work" />
+
+Traditional transformers scale quadratically, which leads to diminishing returns per dollar spent as you scale compute. Transformer architecture likely still has a long way to go before something replaces it, but approaches like RWKV have shown that sub-quadratic architectures can work on smaller models at least (7B). What would a 70B or 200B RWKV model look like compared to other transformer models?
+
+I found [this blog](https://pennylane.ai/blog/2024/04/quantum_transformers/) post on quantum transformers to be fascinating. Not useful (yet), but fascinating.
+
+---
+
+### Can we build mass-scale transformer-specific chips? <a name="can-we-build-mass-scale-transformer-specific-chips" />
+
+Are there chip architectures that scale better than a standard H100 by being specifically focused on transformers? [Etched](https://www.etched.com/) and many others are going after this market. As far as I know none have been tested for a large training run yet. It will be curious to see that happen!
+
+---
+
+### When will we classify models as conscious, and what framework will we use to classify consciousness? <a name="when-will-we-classify-models-as-conscious-and-what-framework-will-we-use-to-classify-consciousness" />
+
+Many smarter people have asked this question and answered it more elegantly. I personally like the following framework:
+
+<aside>
+💡 If the model were left to its own devices with the ability to generate tokens on demand (i.e. with no human prompting it, but maybe input from a live camera feed of the world around it), would it carve out a coherent path of actions day to day? Would it build relationships, would it start to experiences wants & needs?
+
+</aside>
+
+This framework is the furthest thing from perfect and maps AGI far too closely to human consciousness. Maybe the right answer is their version of consciousness is far different from that of any human’s or biological species. I like to think of cats and dogs as examples: they have some level of consciousness - they build relationships, care more for their owners than for other humans, have emotional intelligence. Yet, they are far-less cognitively powerful than humans. Their forms of consciousness is different than a humans, yet in a Venn Diagram, have strange overlaps around care, love, empathy.
+
+---
+
+### What do humans spend their time on in a post-AGI world? <a name="what-do-humans-spend-their-time-on-in-a-post-agi-world" />
+
+In the aftermath of previous revolutions like the agricultural revolution & industrial revolution, humans found themselves with more free time as new technologies automated tasks and increased efficiency. But the transition was often bumpy, with social and economic disruption as people adapted to the new reality. This going to be no different when it comes to AI, and perhaps it might be a much less smooth transition than previous revolutions.
+
+I have no doubt that there will be a steady-state where humans find better ways to spend their time thanks to this technological shift, but it feels like the transition period from pre-to-post AGI is going to be bumpy for most involved.
+
+---
+
+### Will each major nation have their own foundation model? <a name="will-each-major-nation-have-their-own-foundation-model" />
+
+It seems likely that major nations will develop (or acquire, or fund) their own foundation models for a few reasons:
+
+1. Foundation models could be seen as strategic assets, with countries wanting to maintain control over the technology and its applications.
+2. Countries will likely want foundation models tailored to their specific languages, cultural contexts, and values.
+3. Nations may want to ensure that the data used to train foundation models is kept under their jurisdiction.
+
+That said, developing and maintaining SOTA foundation models requires is more than challenging. This may lead to some nations partnering together or smaller nations relying on models developed by larger powers or multinational corporations. The geopolitical landscape of foundation models will likely be shaped by a complex interplay of technological, economic, and strategic factors, with nations weighing the benefits and costs of pursuing their own models versus relying on third-party models. Leading to my next question.
+
+---
+
+### Will a Manhattan Project for AGI be formed in the near-future? <a name="will-a-manhattan-project-for-agi-be-formed-in-the-near-future" />
+
+If models truly get as powerful as some people expect they might, will a large country for a Manhattan Project for AGI? As far as I know, everybody building towards AGI right now is a company whose primary goal is to become a larger, more impactful company. No matter what the company mission is, they are still private companies with goals and ambitions that don’t align with the goals/ambitions of a government. Will this eventually lead to a Manhattan project where, for example, the US government joins the race for AGI? In that world, who would play [Vannevar Bush](https://press.stripe.com/pieces-of-the-action)?
+
+---
+
+### How powerful will the largest private model owners become if they unlock AGI? <a name="how-powerful-will-the-largest-private-model-owners-become-if-they-unlock-agi" />
+
+If OpenAI or similar unlocks AGI, especially before other competitors, how powerful will they become as an organization? How will they be regulated? What would compel them to share it with the world on an even playing field?
+
+---
+
+### How much of GDP expansion will be captured by big tech vs startups? <a name="how-much-of-gdp-expansion-will-be-captured-by-big-tech-vs-startups" />
+
+Google, Meta, Tesla, Amazon, and many other larges companies are benefitting tremendously from generative AI. How much of the new markets will be dominated by companies that have already solved distribution vs startups? I think a tremendous amount of new startups will be built around generative AI, but couldn’t give a guess as to the percentage of the new GDP that they will capture vs incumbents.
+
+---
+
+### How will personal relationships evolve? <a name="how-will-personal-relationships-evolve" />
+
+AI friends, girlfriends, boyfriends are going to impact our real life relationships when they become more normal. Imagine even talking with passed away loved ones - at some point, we’ll be able to (re)create any person, character we want and interact with them instead of real humans. Per [this tweet](https://x.com/deedydas/status/1792388364282523718), this is already happening.
+
+---
+
+### Will we be able to have infinite personalization? <a name="will-we-be-able-to-have-infinite-personalization" />
+
+Describe what you want to LLM → render 3D Model with interactive demo → 3D print is a workflow I’d be very excited about. Maybe this means there should be a consumer-ish AutoDesk that lets people create and edit their 3D models, assuming a world where models are good enough to generate accurate 3D models based on text/image/video inputs.
+
+---
+
+### Should we be backing fiber companies? <a name="should-we-be-backing-fiber-companies" />
+
+AIs will increase internet usage 1000x. Can we handle that load?
+
+---
+
+### Will we ever have quantum LLMs? Is QML Useful? <a name="will-we-ever-have-quantum-llms-is-qml-useful" />
+
+QNNs could lead to exponential representation, quantum parallelism, enhanced optimization, quantum-inspired architectures, and the ability to solve complex problems more efficiently than classical neural networks [[source](https://thomasjmartin.medium.com/quantum-computing-and-the-future-of-large-language-models-such-as-chatgpt-38de0028c462)].
+
+Will this ever be useful? Quantum computers are so far away from useful that it’s hard to imagine this being useful in the next 10 years. I would suspect that by then, classical computing, new model architectures etc. will have evolved so much that the conversation will be different.
+
+[The path to quantum transformers](https://pennylane.ai/blog/2024/04/quantum_transformers/)
+
+---
+
+### Will there be an AI Only Cloud? <a name="will-there-be-an-ai-only-cloud" />
+
+Companies like Together, Fireworks and co are racing to compete on cost-per-token, tokens-per-second etc. and mainly leveraging software innovations to do so (although Groq are more hardware focused). Will there be an AI native cloud provider, once all of this is mainstream? I struggle to see large public companies choosing vertical clouds over bundled solutions like Azure. I’m not debating whether they should exist or not, I’m more questioning how big they will be, and how they differentiate at scale.
+
+<aside>
+💡 I do think that companies like [Northflank](https://northflank.com) will benefit tremendously from the proliferation of many new clouds across custom hardware. Heroku never got to a massive outcome because they were a nice interface on top of one cloud. Now, there are a ~dozen clouds that people care about. In 10 years, there will likely be many dozens. Roll-up aggregators like Northflank should benefit from this.
+
+</aside>
+
+### Who are the Patrons of this revolution? Who benefits from it? Who loses out from it? <a name="who-are-the-patrons-of-this-revolution" />
+
+Comparing this to the Renaissance, who is the equivalent of Cosimo de' Medici? What are their goals? Musk, Zuck, Altman are three examples of people driving this forward who likely all have wildly different goals and success-states that they'd be happy with.
