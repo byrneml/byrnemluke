@@ -39,7 +39,7 @@
       </p>
       
       <p class="text-gray-800 leading-relaxed italic">
-        The universe is large, harsh, and beautiful. We need each other to explore and survive in it.
+        The universe is large, harsh, and beautiful. We need each other to explore its mysteries.
       </p>
     </section>
 
