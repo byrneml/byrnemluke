@@ -35,11 +35,7 @@
       <h2 class="text-2xl font-light text-gray-900">Why do this?</h2>
       
       <p class="text-gray-800 leading-relaxed">
-        We're at the beginning of the most important transition in human history. The next decade will see humans and machines evolve together in ways that shape the next millenia. Exceptional founders are at the forefront of this evolution.
-      </p>
-      
-      <p class="text-gray-800 leading-relaxed italic">
-        The universe is large, harsh, and beautiful. We need each other to explore its mysteries.
+        History waits for no one. The next decade will see humans and machines evolve in ways that shape the next millenia. Exceptional humans are at the forefront of this (r)evolution.
       </p>
     </section>
 
