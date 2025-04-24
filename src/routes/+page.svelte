@@ -24,6 +24,9 @@
         <a href="https://spectrallabs.ai" class="text-[#917971] hover:text-[#79635c] transition-colors" target="_blank" rel="noopener noreferrer">
           Spectral
         </a>,
+        <a href="https://adaptive.ai" class="text-[#917971] hover:text-[#79635c] transition-colors" target="_blank" rel="noopener noreferrer">
+          Adaptive
+        </a>,
         <a href="https://northflank.com" class="text-[#917971] hover:text-[#79635c] transition-colors" target="_blank" rel="noopener noreferrer">
           Northflank
         </a>, and others.
